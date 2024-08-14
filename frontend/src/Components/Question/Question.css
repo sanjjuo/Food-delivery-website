@@ -1,0 +1,41 @@
+.question{
+    margin-bottom: 100px;
+}
+.question h2{
+    text-align: center;
+    text-transform: capitalize;
+    color: orangered;
+    font-weight: 700;
+    margin-bottom: 50px;
+    cursor: default;
+}
+
+.question .question-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 30px;
+    height: 300px;
+    width: 100%;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.question .question-card .icon{
+    font-size: 60px;
+    color: orangered;
+    margin-bottom: 20px;
+}
+
+.question-card h5{
+    text-transform: capitalize;
+    font-weight: 700;
+    color: #49557e;
+    cursor: default;
+}
+
+.question-card p{
+    color: #666565;
+    cursor: default;
+}

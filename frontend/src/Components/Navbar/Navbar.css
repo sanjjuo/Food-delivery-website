@@ -1,0 +1,93 @@
+.navbar{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .logo{
+    width: 110px;
+}
+
+.navbar .navbar-nav{
+    gap: 30px;
+}
+
+.navbar .navbar-nav .nav-link{
+    color: #49557e;
+    font-size: 17px;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: 700;
+    transform: scale(0.99);
+}
+
+.navbar .navbar-nav .nav-link:hover{
+    color: orangered;
+}
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid orangered;
+}
+.navbar .navbar-nav .active.nav-link{
+    color: orangered;
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar-right .icon{
+    font-size: 25px;
+    color: #49557e;
+    cursor: pointer;
+}
+
+.navbar-right .icon:hover{
+    color: orangered;
+}
+.navbar .login button{
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 2px solid #49557e;
+    padding: 5px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transform: 0.3s;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navbar .login button:hover{
+    background-color: orangered;
+    border: 2px solid orangered;
+    color: #fff;
+}
+.navbar-cart-icon{
+    position: relative;
+}
+.navbar-cart-icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: orangered;
+    border-radius: 5px;
+    top: -8px;
+    right: -4px;
+}
+
+
+/* mobile response */
+
+@media (min-width:320px) and (max-width:480px){
+        .navbar-toggler {
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+}

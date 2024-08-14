@@ -1,0 +1,105 @@
+.restaurant{
+    margin-bottom: 100px;
+}
+
+.restaurant h2{
+    text-align: center;
+    color: orangered;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+    cursor: default;
+}
+
+.restaurant .restaurant-cards{
+    border-radius: 20px;
+    position: relative;
+}
+
+.restaurant-cards .image{
+    width: 100%;
+    height: 280px;
+}
+
+.restaurant-cards .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.restaurant-cards .restaurant-name ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    padding-top: 30px;
+    gap: 15px;
+}
+.restaurant-cards .restaurant-name .image{
+    width: 70px;
+    height: 70px;
+}
+
+.restaurant-cards .restaurant-name img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.restaurant-cards .restaurant-name h5{
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #49557e;
+}
+
+.restaurant-cards .restaurant-name span{
+    color: #ffb30e;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.restaurant-cards .discount-timer ul{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    gap: 10px;
+}
+
+.restaurant-cards .discount-timer ul .first-li{
+    background-color: orangered;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: default;
+}
+
+.restaurant-cards .discount-timer ul .second-li{
+    background-color: #ffb30e;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.restaurant .container .opens-state h4{
+    text-transform: capitalize;
+    background-color: #fff4f2;
+    color: orangered;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px 0;
+    cursor: default;
+}

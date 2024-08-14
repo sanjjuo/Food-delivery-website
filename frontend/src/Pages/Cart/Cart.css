@@ -1,0 +1,136 @@
+.cart-section{
+    margin: 100px 0;
+}
+
+.cart-section .table{
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.cart-section .table th{
+    text-transform: capitalize;
+    letter-spacing: 1.1px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: lightgray;
+    padding: 15px 10px;
+    color: #49557e;
+    /* border: none; */
+}
+
+.cart-section .table td{
+    /* border: none; */
+    height: 80px;
+    align-content: center;
+    background-color: #ededed;
+}
+
+.cart-section .table img{
+    width: 100px;
+    height: 80px;
+}
+
+.cart-section .table .remove{
+    text-align: center;
+}
+
+.cart-section .table .remove .icon{
+    font-size: 22px;
+}
+
+.cart-section .table .remove .icon:hover{
+    color: orangered;
+}
+
+
+/* cart-total-section */
+
+.row{
+    padding-top: 50px;
+}
+
+.cart-total-section h4{
+    text-transform: capitalize;
+    font-weight: 700;
+    margin: 0;
+}
+
+.cart-total-section .total-titles-price{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.total-titles-price .total-titles ul,
+.total-titles-price .total-prices ul{
+    padding: 0;
+    list-style: none;
+    line-height: 40px;
+}
+
+.total-titles-price .total-titles li,
+.total-titles-price .total-prices li{
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.total-titles-price .total-titles li:last-child,
+.total-titles-price .total-prices li:last-child{
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.cart-total-section button{
+    background-color: orangered;
+    text-transform: capitalize;
+    color: #fff;
+    border: none;
+    width: 50%;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.cart-total-section button:hover{
+    background-color: #49557e;
+}
+
+/* promo-code-section */
+
+.promo-code-section p{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.promo-code-section .promo-input-btn{
+    display: flex;
+    gap: 10px;
+}
+
+.promo-code-section .promo-input-btn input{
+    background-color: #bdbdbd;
+    color: #616161;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.promo-code-section .promo-input-btn input::placeholder{
+    color: #616161;
+}
+
+.promo-code-section .promo-input-btn input:focus{
+    outline: none;
+}
+
+.promo-code-section .promo-input-btn button{
+    background-color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.promo-code-section .promo-input-btn button:hover{
+    background-color: #616161;
+}

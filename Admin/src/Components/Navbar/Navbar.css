@@ -1,0 +1,25 @@
+.navbar-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 4.5%;
+    background-color: #20203c;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+.navbar-menu .logo{
+    width: 110px;
+}
+
+.navbar-menu .profile{
+    width: 50px;
+}
+
+@media (max-width:900px){
+    .navbar-menu .logo{
+        width: max(10%,100px);
+    } 
+    .navbar-menu .profile{
+        width: 50px;
+    }
+}

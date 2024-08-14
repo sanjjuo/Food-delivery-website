@@ -1,0 +1,66 @@
+.modal .modal-content{
+    padding: 20px;
+}
+
+.modal .title{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.modal .modal-header{
+    border: none;
+}
+
+.modal-header .btn-close:focus{
+    box-shadow: none;
+}
+
+.modal .modal-body form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal .modal-body form input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #bdbdbd;
+    color: #666565;
+}
+
+.modal .modal-body form input:focus{
+    outline: none;
+}
+
+.modal .modal-body form input::placeholder{
+    color: #666565;
+}
+
+.modal .modal-body form button{
+    background-color: orangered;
+    border: none;
+    color: #fff;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.modal .modal-body form button:hover{
+    background-color: #49557e;
+}
+
+.modal .modal-body form .checkbox-privacy-policy{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal .modal-body form .checkbox-privacy-policy p{
+    margin: 0;
+}
+
+.modal .modal-footer{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
