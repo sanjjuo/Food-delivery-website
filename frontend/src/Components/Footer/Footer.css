@@ -39,7 +39,7 @@
 }
 
 .icons-email-section h4{
-    color: orangered;
+    color: tomato;
     font-weight: 700;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .icons-email-section .email-input-btn button:hover{
-    background-color: orangered;
+    background-color: tomato;
 }
 
 .icons-email-section .email-input-btn .email-input{

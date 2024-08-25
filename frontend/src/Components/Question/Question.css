@@ -1,41 +1,88 @@
 .question{
-    margin-bottom: 100px;
+    padding: 50px 0;
 }
 .question h2{
     text-align: center;
     text-transform: capitalize;
-    color: orangered;
+    color: #49557e;
     font-weight: 700;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     cursor: default;
 }
 
-.question .question-card{
+.question .order-image{
+    width: 100%;
+    height: 750px;
+    object-fit: cover;
+}
+
+.question .order-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.question .second{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    padding: 30px;
-    height: 300px;
-    width: 100%;
-    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    background-color: #282932;
+    padding: 0;
 }
 
-.question .question-card .icon{
-    font-size: 60px;
-    color: orangered;
-    margin-bottom: 20px;
+.question .question-part{
+    padding: 50px;
 }
 
-.question-card h5{
-    text-transform: capitalize;
+.question-part h1{
+    color: #fff;
     font-weight: 700;
-    color: #49557e;
     cursor: default;
 }
 
-.question-card p{
-    color: #666565;
+.question-part h3{
+    color: tomato;
+    font-weight: 700;
+    font-size: 35px;
     cursor: default;
+}
+
+.question-part p{
+    color: #fff;
+    font-size: 18px;
+    cursor: default;
+}
+
+.question .icons-part ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.question .icons-part li{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100px;
+    text-align: center;
+    text-transform: capitalize;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.question .icons-part .icon{
+    font-size: 60px;
+    color: rgb(255, 128, 0);
+    transform: translateY(25%);
+    transition: transform 0.3s ease;
+}
+
+.question .icons-part li:hover .icon{
+    transform: translateY(0);
 }

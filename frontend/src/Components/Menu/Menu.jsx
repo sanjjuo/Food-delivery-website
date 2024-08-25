@@ -1,11 +1,33 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "../Menu/Menu.css"
 import { Card, Button } from 'react-bootstrap';
 import { FaCartShopping, FaMinus, FaPlus } from "react-icons/fa6";
+import { CgDetailsMore } from "react-icons/cg";
+import { Hourglass } from 'react-loader-spinner';
+import MenuModal from './MenuModal';
+import { motion } from 'framer-motion';
 
-const Menu = () => {
+const Menu = ({ foodList, url, handleCart }) => {
     const [nav, setNav] = useState("All")
-    const [itemCount, setItemCount] = useState(0)
+    const [itemCount, setItemCount] = useState({})
+    const [loading, setLoading] = useState(false)
+    const [menuModal, setMenuModal] = useState(false);
+    const [foodDetails, setFoodDetails] = useState([])
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(true)
+        }, 2000)
+
+    }, [])
+
+    const handleShowModal = (menu) => {
+        setMenuModal(true)
+        setFoodDetails(menu)
+        console.log(menu);
+
+    }
+
 
     return (
         <div>
@@ -15,78 +37,62 @@ const Menu = () => {
                     <div className="menu-navbar">
                         <ul>
                             <li onClick={() => setNav("All")} className={nav === "All" ? "active" : ""}>all</li>
-                            <li onClick={() => setNav("pizza")} className={nav === "pizza" ? "active" : ""}>pizza</li>
-                            <li onClick={() => setNav("burger")} className={nav === "burger" ? "active" : ""}>burger</li>
+                            <li onClick={() => setNav("sandwich")} className={nav === "sandwich" ? "active" : ""}>Sandwich</li>
+                            <li onClick={() => setNav("noodles")} className={nav === "noodles" ? "active" : ""}>noodles</li>
                             <li onClick={() => setNav("pasta")} className={nav === "pasta" ? "active" : ""}>pasta</li>
+                            <li onClick={() => setNav("ice-cream")} className={nav === "ice-cream" ? "active" : ""}>ice cream</li>
+                            <li onClick={() => setNav("cake")} className={nav === "cake" ? "active" : ""}>cake</li>
                         </ul>
                     </div>
                     <div className="row">
-                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
-                            <Card className='menu-cards'>
-                                <Card.Img variant="top" src="/food_23.png" />
-                                <Card.Body>
-                                    <Card.Title style={{ color: "#49557e" }}>Delicius Pizza</Card.Title>
-                                    <Card.Text style={{ color: "#666565" }}>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</Card.Text>
-                                    <div className="price-btn">
-                                        <h3>Rs. 500</h3>
-                                        <Button><FaCartShopping /> Order now</Button>
-                                    </div>
-                                </Card.Body>
-                                {!itemCount ? <div className="large-plus" onClick={()=>setItemCount(prev=>prev+1)}><FaPlus /></div>
-                                    : <div className="quantity-btns">
-                                        <div className="plus" onClick={()=>setItemCount(prev=>prev+1)}><FaPlus /></div>
-                                        <div className="quantity">{itemCount}</div>
-                                        <div className="minus" onClick={()=>setItemCount(prev=>prev-1)}><FaMinus /></div>
-                                    </div>
-                                }
-                            </Card>
-                        </div>
+                        {!loading ? <Hourglass
+                            visible={true}
+                            height="30"
+                            width="30"
+                            ariaLabel="hourglass-loading"
+                            wrapperStyle={{}}
+                            wrapperClass=""
+                            colors={['#49557e', 'orangered']}
+                        /> : <>
+                            {foodList.map((menu, index) => (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 50 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }} 
+                                    className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12" key={index}>
 
-                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
-                            <Card className='menu-cards'>
-                                <Card.Img variant="top" src="/food_23.png" />
-                                <Card.Body>
-                                    <Card.Title style={{ color: "#49557e" }}>Delicius Pizza</Card.Title>
-                                    <Card.Text style={{ color: "#666565" }}>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</Card.Text>
-                                    <div className="price-btn">
-                                        <h3>Rs. 500</h3>
-                                        <Button><FaCartShopping /> Order now</Button>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </div>
+                                    <Card className='menu-cards'>
+                                        <Card.Img variant="top" src={`${url}/images/${menu.image}`} />
+                                        <div className='detail-icon'><CgDetailsMore onClick={() => handleShowModal(menu)} /></div>
+                                        <Card.Body>
+                                            <Card.Title style={{ color: "#49557e" }}>{menu.name}</Card.Title>
 
-                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
-                            <Card className='menu-cards'>
-                                <Card.Img variant="top" src="/food_23.png" />
-                                <Card.Body>
-                                    <Card.Title style={{ color: "#49557e" }}>Delicius Pizza</Card.Title>
-                                    <Card.Text style={{ color: "#666565" }}>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</Card.Text>
-                                    <div className="price-btn">
-                                        <h3>Rs. 500</h3>
-                                        <Button><FaCartShopping /> Order now</Button>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </div>
+                                            <Card.Text style={{
+                                                color: "#666565",
+                                                display: "-webkit-box",
+                                                WebkitLineClamp: 3, // Number of lines to show
+                                                WebkitBoxOrient: "vertical",
+                                                overflow: "hidden",
+                                                textOverflow: "ellipsis",
+                                            }} className='card-text'>{menu.description}</Card.Text>
 
-                        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12">
-                            <Card className='menu-cards'>
-                                <Card.Img variant="top" src="/food_23.png" />
-                                <Card.Body>
-                                    <Card.Title style={{ color: "#49557e" }}>Delicius Pizza</Card.Title>
-                                    <Card.Text style={{ color: "#666565" }}>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque</Card.Text>
-                                    <div className="price-btn">
-                                        <h3>Rs. 500</h3>
-                                        <Button><FaCartShopping /> Order now</Button>
-                                    </div>
-                                </Card.Body>
-                            </Card>
-                        </div>
+                                            <div className="price-btn">
+                                                <h3>Rs. {menu.price}</h3>
+                                                <Button className='btn' onClick={() => handleCart(menu)}><FaCartShopping /> Add to cart</Button>
+                                            </div>
+                                        </Card.Body>
+                                    </Card>
+                                </motion.div>
+
+                            ))}
+                        </>
+                        }
                     </div>
                 </div>
             </div>
+            <MenuModal show={menuModal} onHide={() => setMenuModal(false)} foodDetails={foodDetails} url={url} handleCart={handleCart} />
         </div>
+
     )
 }
 

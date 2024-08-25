@@ -14,20 +14,68 @@
     background-color: lightgray;
     padding: 15px 10px;
     color: #49557e;
-    /* border: none; */
 }
+
 
 .cart-section .table td{
     /* border: none; */
-    height: 80px;
     align-content: center;
     background-color: #ededed;
+    color: #000;
+    font-weight: 500;
+    font-size: 18px;
+    width: 155px;
 }
 
+
 .cart-section .table img{
-    width: 100px;
+    width: 100%;
     height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
 }
+
+.cart-section .table tr:hover img{
+    transform: scale(1);
+}
+
+.cart-section .quantity-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    /* background-color: #fff; */
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.quantity-btns .plus {
+    color: #49557e;
+    cursor: pointer;
+}
+
+.quantity-btns .minus {
+    color: #49557e;
+    cursor: pointer;
+}
+
+.quantity-btns .plus:hover,
+.quantity-btns .minus:hover{
+    color: orangered;
+}
+.quantity-btns .quantity {
+    width: 10px;
+    text-align: center;
+    font-weight: 700;
+    border: 2px solid #49557e;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+}
+
 
 .cart-section .table .remove{
     text-align: center;

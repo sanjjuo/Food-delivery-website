@@ -1,47 +1,41 @@
 import React from 'react'
 import "../Question/Question.css"
-import { FaLocationDot } from "react-icons/fa6";
-import { BiSolidFoodMenu } from "react-icons/bi";
-import { GiTakeMyMoney } from "react-icons/gi";
-import { GiDonut } from "react-icons/gi";
+import { FaMapLocationDot } from "react-icons/fa6";
+import { GrUserWorker } from "react-icons/gr";
+import { TbTruckDelivery } from "react-icons/tb";
+import { FcTouchscreenSmartphone } from "react-icons/fc";
+import {motion} from "framer-motion"
 
 const Question = () => {
     return (
         <div>
             <div className="question">
                 <h2>how does it work</h2>
-                <div className="container">
+                {/* <div className="container"> */}
                     <div className="row">
-                        <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                            <div className="question-card">
-                                <FaLocationDot className='icon' />
-                                <h5>select location</h5>
-                                <p>choose the location wheere your food will be delivered.</p>
+                        <div className="col-md-6 p-0">
+                            <div className="order-image">
+                                <img src="/order.jpg" alt="" />
                             </div>
                         </div>
-                        <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                            <div className="question-card">
-                                <BiSolidFoodMenu className='icon' />
-                                <h5>choose order</h5>
-                                <p>Check over hundreds of menus to pick your favorite food.</p>
-                            </div>
-                        </div>
-                        <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                            <div className="question-card">
-                                <GiTakeMyMoney className='icon' />
-                                <h5>Pay advanced</h5>
-                                <p>It's quick, safe, and simple. Select several methods of payment.</p>
-                            </div>
-                        </div>
-                        <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                            <div className="question-card">
-                                <GiDonut className='icon' />
-                                <h5>Enjoy meals</h5>
-                                <p>Food is made and delivered directly to your home.</p>
+                        <div className="col-md-6 second">
+                            <div className="question-part">
+                                <motion.h1 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: -10 }} transition={{ duration: 0.5 }}>Sit at Home</motion.h1>
+                                <motion.h3 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: -10 }} transition={{ duration: 0.5 }}>We will take care</motion.h3>
+                                <motion.p initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: -10 }} transition={{ duration: 0.5 }}>Proin ornare posuere quam ut euismod. Nam eu nunc vitae orci ultrices imperdiet ut id ligula.
+                                     Sed interdum eros eget sagittis rutrum. Vestibulum in elementum mauris. In iaculis odio urna.</motion.p>
+                                <div className="icons-part">
+                                    <ul>
+                                        <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: -10 }} transition={{ duration: 0.5 }}><TbTruckDelivery className='icon'/>fast delivery in 1 hour</motion.li>
+                                        <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: -10 }} transition={{ duration: 0.5 }}><FcTouchscreenSmartphone className='icon'/>amazing mobile app</motion.li>
+                                        <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: -10 }} transition={{ duration: 0.5 }}><FaMapLocationDot className='icon'/>wide coverage map</motion.li>
+                                        <motion.li initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: -10 }} transition={{ duration: 0.5 }}><GrUserWorker className='icon'/>more than 150 couriers</motion.li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                {/* </div> */}
             </div>
         </div>
     )

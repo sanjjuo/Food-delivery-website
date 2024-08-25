@@ -3,15 +3,26 @@ import "../Navbar/Navbar.css"
 import { FaCartShopping } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
 import { FaUser } from "react-icons/fa6";
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import {Link} from "react-router-dom";
+import { Navbar, Nav, Container, Dropdown, NavDropdown } from 'react-bootstrap';
+import { Link, useNavigate } from "react-router-dom";
 import LoginSignupModal from '../LoginSignUpModal/LoginSignUpModal';
-import { assets } from '../../assets/assets';
+import { HiUser } from "react-icons/hi2";
+import { GiShoppingBag } from "react-icons/gi";
+import { RiLogoutBoxFill } from "react-icons/ri";
 
 
-const NavbarMenu = ({token, setToken}) => {
+const NavbarMenu = ({ token, setToken, url, size }) => {
     const [menu, setMenu] = useState("home");
     const [modalShow, setModalShow] = useState(false);
+
+    const navigate = useNavigate()
+
+    const logout = () =>{
+        localStorage.removeItem("token")
+        setToken("")
+        navigate("/")
+    }
+
     return (
         <>
             <Navbar expand="lg" className="bg-body-light">
@@ -30,24 +41,26 @@ const NavbarMenu = ({token, setToken}) => {
                                 <IoSearch className='icon' />
                             </div>
                             <Link to="/cart">
-                            <div className="navbar-cart-icon">
-                                <FaCartShopping className='icon' />
-                                <div className="dot"></div>
-                            </div>
+                                <div className="navbar-cart-icon">
+                                    <FaCartShopping className='icon' />
+                                    <div className="dot">{size}</div>
+                                </div>
                             </Link>
                             <div className="login">
                                 {!token ? <button onClick={() => setModalShow(true)}><FaUser /> Log in</button>
-                                : <div className='user-profile'>
-                                    <img src={assets.profile_icon} alt="" />
-                                    <ul className="profile-dropdown">
-                                        <li><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
-                                        <hr />
-                                        <li><img src={assets.logout_icon} alt="" /><p>Logout</p></li>
-                                    </ul>
-                                </div> }
-                               
+                                    : <NavDropdown
+                                        align="start"
+                                        id="nav-dropdown-dark-example"
+                                        title={<HiUser size={25} color='#49557e'/>}
+                                        menuVariant="black"
+                                    >
+                                        <NavDropdown.Item  className='custom-drop-item'><GiShoppingBag size={25} color='#49557e'/>Orders</NavDropdown.Item>
+                                        <NavDropdown.Divider />
+                                        <NavDropdown.Item  className='custom-drop-item' onClick={logout}><RiLogoutBoxFill size={25} color='#49557e'/>Logout</NavDropdown.Item>
+                                    </NavDropdown>}
+
                             </div>
-                            <LoginSignupModal show={modalShow} token={token} setToken={setToken} onHide={() => setModalShow(false)} setModalShow={setModalShow} />
+                            <LoginSignupModal show={modalShow} token={token} setToken={setToken} onHide={() => setModalShow(false)} setModalShow={setModalShow} url={url} />
                         </div>
                     </Navbar.Collapse>
                 </Container>

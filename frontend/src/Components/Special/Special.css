@@ -31,7 +31,7 @@
 }
 
 .special-fd-section .special-fd h3 span{
-    color: orangered;
+    color: tomato;
 }
 
 .special-fd-section .special-fd p{
@@ -41,7 +41,7 @@
 
 
 .special-fd-section .special-fd button{
-    background-color: orangered;
+    background-color: tomato;
     border: none;
     color: #fff;
     padding: 10px;
@@ -118,7 +118,7 @@
 }
 
 .proceed-best-order-section .content button{
-    background-color: orangered;
+    background-color: tomato;
     border: none;
     color: #fff;
     padding: 10px 30px;

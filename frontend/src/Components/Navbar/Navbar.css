@@ -3,6 +3,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.navbar .go-top{
+    position: absolute;
+    bottom: 0;
 }
 .navbar .logo{
     width: 110px;
@@ -22,14 +28,14 @@
 }
 
 .navbar .navbar-nav .nav-link:hover{
-    color: orangered;
+    color: tomato;
 }
 .navbar .active{
     padding-bottom: 2px;
-    border-bottom: 2px solid orangered;
+    border-bottom: 2px solid tomato;
 }
 .navbar .navbar-nav .active.nav-link{
-    color: orangered;
+    color: tomato;
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
@@ -47,7 +53,7 @@
 }
 
 .navbar-right .icon:hover{
-    color: orangered;
+    color: tomato;
 }
 .navbar .login button{
     background: transparent;
@@ -64,8 +70,8 @@
     gap: 10px;
 }
 .navbar .login button:hover{
-    background-color: orangered;
-    border: 2px solid orangered;
+    background-color: tomato;
+    border: 2px solid tomato;
     color: #fff;
 }
 .navbar-cart-icon{
@@ -73,12 +79,35 @@
 }
 .navbar-cart-icon .dot{
     position: absolute;
-    min-width: 10px;
-    min-height: 10px;
-    background-color: orangered;
-    border-radius: 5px;
-    top: -8px;
-    right: -4px;
+    color: tomato;
+    top: -14px;
+    right: -12px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* custom-dropdown-toggle */
+
+.custom-dropdown-toggle::after{
+    display: none;   
+}
+
+/* dropdown */
+
+
+.custom-drop-item{
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    font-weight: 600 !important;
+    gap: 8px;
+    color: #49557e !important;
+}
+
+.custom-drop-item:hover{
+    color: tomato !important;
 }
 
 

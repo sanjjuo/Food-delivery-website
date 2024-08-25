@@ -1,7 +1,9 @@
 import React from 'react'
 import "../PopularFood/PopularFood.css"
-import { FaLocationDot } from "react-icons/fa6";
+import { FaCartShopping, FaLocationDot } from "react-icons/fa6";
 import Slider from "react-slick";
+import { CgDetailsMore } from "react-icons/cg";
+import { motion } from "framer-motion"
 
 const PopularFood = () => {
     const settings = {
@@ -45,45 +47,101 @@ const PopularFood = () => {
             <div className="container">
                 <div className="slider-container2">
                     <Slider {...settings}>
-                        <div className="popular-item-card">
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="popular-item-card">
                             <div className="image">
-                                <img src="/food_13.png" alt="" />
+                                <img src="/cake.jpg" alt="" />
                             </div>
-                            <h3>cake</h3>
-                            <h5><FaLocationDot /> burger arena</h5>
-                            <p>Rs. 250</p>
-                            <button>order now</button>
-                        </div>
+                            <CgDetailsMore className='details-icon' />
+                            <div className="slide-details">
+                                <h3>chocolate lava cake</h3>
+                                <p>Cake is a sweet, baked dessert made from flour, sugar, eggs, and butter,
+                                    often flavored and decorated for celebrations.baked dessert typically made from
+                                    a mixture of flour, sugar, eggs, and butter or oil, often flavored with ingredients
+                                    like vanilla, chocolate, or fruit.
+                                </p>
+                                <div className="price-location">
+                                    <p>Rs. 250</p>
+                                    <h5><FaLocationDot /> burger arena</h5>
+                                </div>
+                                <button><FaCartShopping /> Add to cart</button>
+                            </div>
+                        </motion.div>
 
-                        <div className="popular-item-card">
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1 }}
+                            className="popular-item-card">
                             <div className="image">
-                                <img src="/food_16.png" alt="" />
+                                <img src="/cake.jpg" alt="" />
                             </div>
-                            <h3>cake</h3>
-                            <h5><FaLocationDot /> burger arena</h5>
-                            <p>Rs. 250</p>
-                            <button>order now</button>
-                        </div>
+                            <div className="slide-details">
+                                <h3>chocolate lava cake</h3>
+                                <p>Cake is a sweet, baked dessert made from flour, sugar, eggs, and butter,
+                                    often flavored and decorated for celebrations.baked dessert typically made from
+                                    a mixture of flour, sugar, eggs, and butter or oil, often flavored with ingredients
+                                    like vanilla, chocolate, or fruit.
+                                </p>
+                                <div className="price-location">
+                                    <p>Rs. 250</p>
+                                    <h5><FaLocationDot /> burger arena</h5>
+                                </div>
+                                <button><FaCartShopping /> Add to cart</button>
+                            </div>
+                        </motion.div>
 
-                        <div className="popular-item-card">
-                            <div className="image">
-                                <img src="/food_14.png" alt="" />
-                            </div>
-                            <h3>cake</h3>
-                            <h5><FaLocationDot /> burger arena</h5>
-                            <p>Rs. 250</p>
-                            <button>order now</button>
-                        </div>
 
-                        <div className="popular-item-card">
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1.5 }}
+                            className="popular-item-card">
                             <div className="image">
-                                <img src="/food_13.png" alt="" />
+                                <img src="/cake.jpg" alt="" />
                             </div>
-                            <h3>cake</h3>
-                            <h5><FaLocationDot /> burger arena</h5>
-                            <p>Rs. 250</p>
-                            <button>order now</button>
-                        </div>
+                            <div className="slide-details">
+                                <h3>chocolate lava cake</h3>
+                                <p>Cake is a sweet, baked dessert made from flour, sugar, eggs, and butter,
+                                    often flavored and decorated for celebrations.baked dessert typically made from
+                                    a mixture of flour, sugar, eggs, and butter or oil, often flavored with ingredients
+                                    like vanilla, chocolate, or fruit.
+                                </p>
+                                <div className="price-location">
+                                    <p>Rs. 250</p>
+                                    <h5><FaLocationDot /> burger arena</h5>
+                                </div>
+                                <button><FaCartShopping /> Add to cart</button>
+                            </div>
+                        </motion.div>
+
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 2 }}
+                            className="popular-item-card">
+                            <div className="image">
+                                <img src="/cake.jpg" alt="" />
+                            </div>
+                            <div className="slide-details">
+                                <h3>chocolate lava cake</h3>
+                                <p>Cake is a sweet, baked dessert made from flour, sugar, eggs, and butter,
+                                    often flavored and decorated for celebrations.baked dessert typically made from
+                                    a mixture of flour, sugar, eggs, and butter or oil, often flavored with ingredients
+                                    like vanilla, chocolate, or fruit.
+                                </p>
+                                <div className="price-location">
+                                    <p>Rs. 250</p>
+                                    <h5><FaLocationDot /> burger arena</h5>
+                                </div>
+                                <button><FaCartShopping /> Add to cart</button>
+                            </div>
+                        </motion.div>
+
                     </Slider>
                 </div>
             </div>

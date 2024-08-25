@@ -4,102 +4,141 @@
 
 .restaurant h2{
     text-align: center;
-    color: orangered;
+    color: #49557e;
     font-weight: 700;
     margin-bottom: 50px;
     text-transform: capitalize;
     cursor: default;
 }
 
-.restaurant .restaurant-cards{
+.restaurant .restaurant-card{
+    background-color: #f2efe6;
     border-radius: 20px;
-    position: relative;
+    overflow: hidden;
 }
 
-.restaurant-cards .image{
-    width: 100%;
-    height: 280px;
-}
-
-.restaurant-cards .image img{
+.restaurant .restaurant-card .large-image{
     width: 100%;
     height: 100%;
     border-radius: 20px;
 }
 
-.restaurant-cards .restaurant-name ul{
-    display: flex;
-    list-style: none;
-    padding: 0;
-    padding-top: 30px;
-    gap: 15px;
-}
-.restaurant-cards .restaurant-name .image{
-    width: 70px;
-    height: 70px;
-}
-
-.restaurant-cards .restaurant-name img{
+.restaurant .restaurant-card .large-image img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
 }
 
-.restaurant-cards .restaurant-name h5{
-    text-transform: capitalize;
-    font-weight: 700;
-    letter-spacing: 1px;
+.restaurant-card .restaurant-details {
+    padding: 20px;
+}
+
+.restaurant-card .restaurant-details h1{
+    font-weight: 800;
     color: #49557e;
+    margin-bottom: 20px;
 }
 
-.restaurant-cards .restaurant-name span{
-    color: #ffb30e;
+.restaurant-card .restaurant-details span{
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 5px;
-}
-
-.restaurant-cards .discount-timer ul{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    list-style: none;
-    display: flex;
-    padding: 0;
     gap: 10px;
+    margin-bottom: 10px;
 }
 
-.restaurant-cards .discount-timer ul .first-li{
-    background-color: orangered;
-    color: #fff;
-    border-radius: 10px;
-    padding: 5px 15px;
-    font-weight: 700;
+.restaurant-card .restaurant-details .know-more{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 5px;
-    cursor: default;
 }
 
-.restaurant-cards .discount-timer ul .second-li{
-    background-color: #ffb30e;
-    color: #fff;
-    border-radius: 10px;
-    padding: 5px 15px;
-    font-weight: 700;
+.restaurant-card .restaurant-details .know-more .arrow-icon{
+    background-color: #49557e;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 99px;
+    transform: scale(.94);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.restaurant-card .restaurant-details .know-more .arrow-icon:hover{
+    transform: scale(1);
+}
+
+.restaurant-card:hover .large-image img{
+    transform: scale(1.03);
+}
+
+/* small-cards */
+
+
+.restaurant .small-cards{
+    background-color: #f2efe6;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.restaurant .small-cards .image{
+    width: 100%;
+    height: 313px;
+}
+
+.restaurant .small-cards .image img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.small-cards .details {
+    padding: 20px;
+}
+
+.small-cards .details h1{
+    font-weight: 800;
+    color: #49557e;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.small-cards .details span{
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-.restaurant .container .opens-state h4{
-    text-transform: capitalize;
-    background-color: #fff4f2;
-    color: orangered;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 5px 0;
-    cursor: default;
+.small-cards .details .know-more{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.small-cards .details .know-more .arrow-icon{
+    background-color: #49557e;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 99px;
+    transform: scale(.94);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.small-cards .details .know-more .arrow-icon:hover{
+    transform: scale(1);
+}
+
+.small-cards:hover .image img{
+    transform: scale(1.03);
 }

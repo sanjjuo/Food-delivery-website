@@ -6,8 +6,7 @@ import axios from "axios";
 
 const LoginSignupModal = (props) => {
 
-    const { setModalShow, setToken, token, ...modalProps } = props;
-    const url = "http://localhost:4000"
+    const { setModalShow, setToken, token,url, ...modalProps } = props;
     const [modals, setModals] = useState("Login");
     const [userLogin, setUserLogin] = useState({
         name: "",

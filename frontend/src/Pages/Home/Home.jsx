@@ -8,15 +8,15 @@ import Menu from '../../Components/Menu/Menu'
 import Special from '../../Components/Special/Special'
 
 
-const Home = () => {
+const Home = ({foodList, setFoodList, url, handleCart}) => {
     const [category, setCategory]= useState("All")
   return (
     <div>
       <Header/>
-      <Question/>
       <PopularFood/>
+      <Question/>
       <Restaurant/>
-      <Menu/>
+      <Menu foodList={foodList} setFoodList={setFoodList} url={url} handleCart={handleCart}/>
       <Special/>
     </div>
   )
