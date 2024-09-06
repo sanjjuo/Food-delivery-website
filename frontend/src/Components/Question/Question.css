@@ -86,3 +86,13 @@
 .question .icons-part li:hover .icon{
     transform: translateY(0);
 }
+
+@media (min-width:320px) and (max-width:480px){
+    .question .icons-part ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .question .question-part {
+        padding: 25px;
+    }
+}

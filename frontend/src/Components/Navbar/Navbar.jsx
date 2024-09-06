@@ -33,7 +33,6 @@ const NavbarMenu = ({ token, setToken, url, size }) => {
                         <Nav className="mx-auto">
                             <Nav.Link href="#home" as={Link} to="/" onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>Home</Nav.Link>
                             <Nav.Link href="#menu" onClick={() => setMenu("menu")} className={menu === "menu" ? "active" : ""}>Menu</Nav.Link>
-                            <Nav.Link href="#mobile-app" onClick={() => setMenu("mobile-app")} className={menu === "mobile-app" ? "active" : ""}>Mobile-App</Nav.Link>
                             <Nav.Link href="#contact-us" onClick={() => setMenu("contact-us")} className={menu === "contact-us" ? "active" : ""}>Contact</Nav.Link>
                         </Nav>
                         <div className="navbar-right">

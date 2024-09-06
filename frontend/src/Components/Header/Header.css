@@ -41,3 +41,20 @@
     background-color: #49557e;
     color: white;
 }
+
+@media (min-width:320px) and (max-width:480px) {
+    .header {
+        height: 370px;
+        position: relative;
+    }
+    .header-contents p {
+        font-size: 16px;
+    }
+    .header-contents {
+        position: absolute;
+        gap: 1.5vw;
+        max-width: 100%;
+        bottom: 20%;
+        left: 6vw;
+    }
+}

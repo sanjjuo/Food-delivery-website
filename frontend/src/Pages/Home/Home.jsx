@@ -5,7 +5,6 @@ import Question from '../../Components/Question/Question'
 import PopularFood from '../../Components/PopularFood/PopularFood'
 import Restaurant from '../../Components/Restaurant/Restaurant'
 import Menu from '../../Components/Menu/Menu'
-import Special from '../../Components/Special/Special'
 
 
 const Home = ({foodList, setFoodList, url, handleCart}) => {
@@ -17,7 +16,6 @@ const Home = ({foodList, setFoodList, url, handleCart}) => {
       <Question/>
       <Restaurant/>
       <Menu foodList={foodList} setFoodList={setFoodList} url={url} handleCart={handleCart}/>
-      <Special/>
     </div>
   )
 }

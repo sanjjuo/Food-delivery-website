@@ -74,7 +74,7 @@ const PopularFood = () => {
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1 }}
+                            transition={{ duration: 0.8 }}
                             className="popular-item-card">
                             <div className="image">
                                 <img src="/cake.jpg" alt="" />
@@ -98,7 +98,7 @@ const PopularFood = () => {
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1.5 }}
+                            transition={{ duration: 1.1 }}
                             className="popular-item-card">
                             <div className="image">
                                 <img src="/cake.jpg" alt="" />
@@ -122,7 +122,30 @@ const PopularFood = () => {
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 2 }}
+                            transition={{ duration: 1.4 }}
+                            className="popular-item-card">
+                            <div className="image">
+                                <img src="/cake.jpg" alt="" />
+                            </div>
+                            <div className="slide-details">
+                                <h3>chocolate lava cake</h3>
+                                <p>Cake is a sweet, baked dessert made from flour, sugar, eggs, and butter,
+                                    often flavored and decorated for celebrations.baked dessert typically made from
+                                    a mixture of flour, sugar, eggs, and butter or oil, often flavored with ingredients
+                                    like vanilla, chocolate, or fruit.
+                                </p>
+                                <div className="price-location">
+                                    <p>Rs. 250</p>
+                                    <h5><FaLocationDot /> burger arena</h5>
+                                </div>
+                                <button><FaCartShopping /> Add to cart</button>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1.7 }}
                             className="popular-item-card">
                             <div className="image">
                                 <img src="/cake.jpg" alt="" />
