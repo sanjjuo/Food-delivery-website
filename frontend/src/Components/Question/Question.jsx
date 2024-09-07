@@ -13,7 +13,7 @@ const Question = () => {
                 <h2>how does it work</h2>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6 p-0">
+                        <div className="col-md-6">
                             <div className="order-image">
                                 <img src="/order.jpg" alt="" />
                             </div>

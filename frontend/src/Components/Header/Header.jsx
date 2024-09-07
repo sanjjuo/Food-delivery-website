@@ -6,7 +6,7 @@ const Header = () => {
 
     return (
         <>
-            <div className='header'>
+            <div className='header' id='home'>
                 <div className="header-contents">
                     <motion.h2
                         initial={{ opacity: 0, y: 50 }}

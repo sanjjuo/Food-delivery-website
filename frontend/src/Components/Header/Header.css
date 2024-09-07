@@ -2,6 +2,7 @@
     height: 600px;
     background: url("/header_img.png") no-repeat;
     position: relative;
+    background-size: cover;
 }
 .header-contents{
     position: absolute;
@@ -44,17 +45,20 @@
 
 @media (min-width:320px) and (max-width:480px) {
     .header {
-        height: 370px;
+        height: 470px;
         position: relative;
     }
     .header-contents p {
         font-size: 16px;
+        text-align: justify;
     }
     .header-contents {
         position: absolute;
         gap: 1.5vw;
         max-width: 100%;
-        bottom: 20%;
-        left: 6vw;
+        bottom: 15%;
+        left: 4vw;
+        right: 4vw;
+        padding: 0 5px;
     }
 }

@@ -9,6 +9,9 @@ import LoginSignupModal from '../LoginSignUpModal/LoginSignUpModal';
 import { HiUser } from "react-icons/hi2";
 import { GiShoppingBag } from "react-icons/gi";
 import { RiLogoutBoxFill } from "react-icons/ri";
+import { IoHome } from "react-icons/io5";
+import { IoFastFood } from "react-icons/io5";
+import { FaMobile } from "react-icons/fa6";
 
 
 const NavbarMenu = ({ token, setToken, url, size }) => {
@@ -17,7 +20,7 @@ const NavbarMenu = ({ token, setToken, url, size }) => {
 
     const navigate = useNavigate()
 
-    const logout = () =>{
+    const logout = () => {
         localStorage.removeItem("token")
         setToken("")
         navigate("/")
@@ -50,12 +53,12 @@ const NavbarMenu = ({ token, setToken, url, size }) => {
                                     : <NavDropdown
                                         align="start"
                                         id="nav-dropdown-dark-example"
-                                        title={<HiUser size={25} color='#49557e'/>}
+                                        title={<HiUser size={25} color='#49557e' />}
                                         menuVariant="black"
                                     >
-                                        <NavDropdown.Item  className='custom-drop-item'><GiShoppingBag size={25} color='#49557e'/>Orders</NavDropdown.Item>
+                                        <NavDropdown.Item className='custom-drop-item'><GiShoppingBag size={25} color='#49557e' />Orders</NavDropdown.Item>
                                         <NavDropdown.Divider />
-                                        <NavDropdown.Item  className='custom-drop-item' onClick={logout}><RiLogoutBoxFill size={25} color='#49557e'/>Logout</NavDropdown.Item>
+                                        <NavDropdown.Item className='custom-drop-item' onClick={logout}><RiLogoutBoxFill size={25} color='#49557e' />Logout</NavDropdown.Item>
                                     </NavDropdown>}
 
                             </div>
@@ -64,6 +67,39 @@ const NavbarMenu = ({ token, setToken, url, size }) => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
+            <section className="mobile-navbar">
+                <div className="logo-login-icons">
+                    <div className="image">
+                        <img src="/logo.png" alt="" />
+                    </div>
+                    <div className="login-icons">
+                        <ul>
+                            <li><IoSearch size={22} color='#49557e' /></li>
+                            <Link to="/cart"><li><FaCartShopping size={22} color='#49557e' /><span className="dot">{size}</span></li></Link>
+                            <li onClick={() => setModalShow(true)}>{! token ? (<button type="button"><FaUser />Log in</button>
+                                ):(<NavDropdown
+                                    align="start"
+                                    id="nav-dropdown-dark-example"
+                                    title={<HiUser size={25} color='#49557e' />}
+                                >
+                                    <NavDropdown.Item className='custom-drop-item'><GiShoppingBag size={25} color='#49557e' />Orders</NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item className='custom-drop-item' onClick={logout}><RiLogoutBoxFill size={25} color='#49557e' />Logout</NavDropdown.Item>
+                                </NavDropdown>)}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section className="bottom-menu-bar">
+                <ul>
+                    <li><a href="#home"><IoHome/></a></li>
+                    <li><a href="#menu"><IoFastFood/></a></li>
+                    <li><a href=""><FaMobile/></a></li>
+                </ul>
+            </section>
         </>
     )
 }
